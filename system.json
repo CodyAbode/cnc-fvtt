@@ -1,0 +1,30 @@
+{
+    "id": "cnc-fvtt",
+    "title": "Capes & Capers",
+    "description": "A system for telling stories featuring superpowered heroes and villains!",
+    "version": "0.0.0",
+    "compatibility": {
+      "minimum": 12,
+      "verified": 12
+    },
+    "authors": [{
+      "name": "CodyAbode",
+      "url": "https://github.com/CodyAbode",
+      "discord": "codyabode"
+    }],
+    "documentTypes": {
+      "Actor": {
+        "character": { "htmlFields": ["background.biography"] }
+      },
+      "Item": {
+        "power": {},
+        "gadget": {}
+      }
+    },
+    "socket": false,
+    "initiative": "1d20",
+    "grid": {
+      "distance": 1,
+      "units": "unit"
+    }
+  }
