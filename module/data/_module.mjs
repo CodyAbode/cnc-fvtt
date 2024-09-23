@@ -8,3 +8,4 @@ export {default as CapesCapersItemBase} from "./base-item.mjs";
 export {default as CapesCapersItem} from "./item-item.mjs";
 export {default as CapesCapersFeature} from "./item-feature.mjs";
 export {default as CapesCapersSpell} from "./item-spell.mjs";
+export {default as CapesCapersPower} from "./item-power.mjs";

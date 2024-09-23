@@ -49,7 +49,8 @@ Hooks.once('init', function () {
   CONFIG.Item.dataModels = {
     item: models.CapesCapersItem,
     feature: models.CapesCapersFeature,
-    spell: models.CapesCapersSpell
+    spell: models.CapesCapersSpell,
+    power: models.CapesCapersPower
   }
 
   // Active Effects are never copied to the Actor,

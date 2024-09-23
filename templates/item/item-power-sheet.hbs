@@ -1,0 +1,55 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <div class="resource flex-group-center">
+      <img class="profile-img power-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+    </div>
+    <div class="break"></div>
+    <div class="header-fields">
+      <div class="resources grid grid-2col">
+        <div class="resource flex-group-left">
+          <label class="resource-label">Power Set</label>
+          <input class="sheet-input" name="system.powerset" type="text" value="{{system.powerset}}" placeholder="Power Set"/>
+        </div>
+        <div class="resource flex-group-left">
+          <label class="resource-label">Power Name</label>
+          <input class="sheet-input" name="name" type="text" value="{{item.name}}" placeholder="Power Name"/>
+        </div>
+      </div>
+      <div class="resources grid grid-2col">
+        <div class="resource flex-group-left">
+          <label class="resource-label">Power Point Cost</label>
+          <input class="sheet-input" name="system.ppcost" type="text" value="{{system.ppcost}}" placeholder="PP Cost"/>
+        </div>
+        <div class="resource flex-group-left">
+          <label class="resource-label">Action Type</label>
+          <input class="sheet-input" name="system.actioncost" type="text" value="{{system.actioncost}}" placeholder="Action Type"/>
+        </div>
+      </div>
+    </div>
+    <div class="break"></div>
+    <div class="resource flex-group-left">
+      <label class="resource-label">Requirements</label>
+      <input class="sheet-input" name="system.requirements" type="text" value="{{system.requirements}}" placeholder="Requirements"/>
+    </div>
+  </header>
+
+  {{! Sheet Tab Navigation }}
+  <nav class='sheet-tabs tabs' data-group='primary'>
+    <a class='item' data-tab='description'>Description</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+    <div class='tab' data-group='primary' data-tab='description'>
+      {{! Editors must receive enriched text data from getData to properly handle rolls }}
+      {{editor
+        enrichedDescription
+        target='system.description'
+        engine='prosemirror'
+        button=true
+        editable=editable
+      }}
+    </div>
+  </section>
+
+</form>

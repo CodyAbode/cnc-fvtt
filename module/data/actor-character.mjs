@@ -8,9 +8,14 @@ export default class CapesCapersCharacter extends CapesCapersActorBase {
     const schema = super.defineSchema();
 
     schema.attributes = new fields.SchemaField({
-      level: new fields.SchemaField({
-        value: new fields.NumberField({ ...requiredInteger, initial: 1 })
-      }),
+      realname: new fields.StringField({ required: false, blank: true }),
+      origin: new fields.StringField({ required: false, blank: true }),
+      occupation: new fields.StringField({ required: false, blank: true }),
+      powersets: new fields.StringField({ required: false, blank: true }),
+      speed: new fields.NumberField({ ...requiredInteger, initial: 5, min: 0 }),
+      stress: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      trainingdice: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      level: new fields.NumberField({ ...requiredInteger, initial: 1, min: 0 })
     });
 
     // Iterate over ability names and create a new SchemaField for each.
@@ -38,7 +43,7 @@ export default class CapesCapersCharacter extends CapesCapersActorBase {
     const data = {};
 
     // Copy the ability scores to the top level, so that rolls can use
-    // formulas like `@str.mod + 4`.
+    // formulas like `@mig.mod + 4`.
     if (this.abilities) {
       for (let [k,v] of Object.entries(this.abilities)) {
         data[k] = foundry.utils.deepClone(v);

@@ -13,23 +13,23 @@
         </div>
         <div class="resource flex-group-left">
           <label class="resource-label">Real Name</label>
-          <input class="sheet-input" name="system.realname" type="text" value="{{system.realname}}" placeholder="Real Name"/>
+          <input class="sheet-input" name="system.attributes.realname" type="text" value="{{system.attributes.realname}}" placeholder="Real Name"/>
         </div>
         
         <div class="resource flex-group-left">
           <label class="resource-label">Origin</label>
-          <input class="sheet-input" name="system.origin" type="text" value="{{system.origin}}" placeholder="Origin"/>
+          <input class="sheet-input" name="system.attributes.origin" type="text" value="{{system.attributes.origin}}" placeholder="Origin"/>
         </div>
         <div class="resource flex-group-left">
           <label class="resource-label">Occupation</label>
-          <input class="sheet-input" name="system.occupation" type="text" value="{{system.occupation}}" placeholder="Occupation"/>
+          <input class="sheet-input" name="system.attributes.occupation" type="text" value="{{system.attributes.occupation}}" placeholder="Occupation"/>
         </div>
 
       </div>
 
       <div class="resource flex-group-left">
         <label class="resource-label">Power Sets</label>
-        <input class="sheet-input" name="system.powersets" type="text" value="{{system.powersets}}" placeholder="Power Sets"/>
+        <input class="sheet-input" name="system.attributes.powersets" type="text" value="{{system.attributes.powersets}}" placeholder="Power Sets"/>
       </div>
       
     </div>
@@ -58,22 +58,22 @@
 
       <div class="resource flex-group-center">
         <label class="resource-label">Speed</label>
-        <input class="sheet-input" type="text" name="system.speed" value="{{system.speed}}" data-dtype="Number"/>
+        <input class="sheet-input" type="text" name="system.attributes.speed" value="{{system.attributes.speed}}" data-dtype="Number"/>
       </div>
 
       <div class="resource flex-group-center">
         <label class="resource-label">Stress</label>
-        <input class="sheet-input" type="text" name="system.stress" value="{{system.stress}}" data-dtype="Number"/>
+        <input class="sheet-input" type="text" name="system.attributes.stress" value="{{system.attributes.stress}}" data-dtype="Number"/>
       </div>
 
       <div class="resource flex-group-center">
         <label class="resource-label">Training Dice</label>
-        <input class="sheet-input" type="text" name="system.trainingdice" value="{{system.trainingdice}}" data-dtype="Number"/>
+        <input class="sheet-input" type="text" name="system.attributes.trainingdice" value="{{system.attributes.trainingdice}}" data-dtype="Number"/>
       </div>
 
       <div class="resource flex-group-center">
-        <label for="system.attributes.level.value" class="resource-label">Power Level</label>
-        <input class="sheet-input" type="text" name="system.attributes.level.value" value="{{system.attributes.level.value}}" data-dtype="Number"/>
+        <label for="system.attributes.level" class="resource-label">Power Level</label>
+        <input class="sheet-input" type="text" name="system.attributes.level" value="{{system.attributes.level}}" data-dtype="Number"/>
       </div>
 
     </div>
@@ -105,7 +105,7 @@
   {{!-- Sheet Body --}}
   <section class="sheet-body">
 
-    {{!-- Owned Features Tab --}}
+    {{!-- Powers Tab --}}
     <div class="tab powers" data-group="primary" data-tab="powers">
           {{!-- This is a Handlebars partial. They're stored in the `/parts` folder next to this sheet, and defined in module/helpers/templates.mjs --}}
           {{> "systems/cnc-fvtt/templates/actor/parts/actor-powers.hbs"}}
