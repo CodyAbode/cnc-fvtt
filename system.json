@@ -1,30 +1,42 @@
 {
-    "id": "cnc-fvtt",
-    "title": "Capes & Capers",
-    "description": "A system for telling stories featuring superpowered heroes and villains!",
-    "version": "0.0.0",
-    "compatibility": {
-      "minimum": 12,
-      "verified": 12
-    },
-    "authors": [{
-      "name": "CodyAbode",
-      "url": "https://github.com/CodyAbode",
-      "discord": "codyabode"
-    }],
-    "documentTypes": {
-      "Actor": {
-        "character": { "htmlFields": ["background.biography"] }
-      },
-      "Item": {
-        "power": {},
-        "gadget": {}
-      }
-    },
-    "socket": false,
-    "initiative": "1d20",
-    "grid": {
-      "distance": 1,
-      "units": "unit"
-    }
+  "id": "cnc-fvtt",
+  "title": "Capes & Capers",
+  "description": "A system for telling stories featuring superpowered heroes and villains!",
+  "version": "0.0.0",
+  "compatibility": {
+    "minimum": 12,
+    "verified": 12
+  },
+  "url": "https://github.com/CodyAbode/cnc-fvtt",
+  "authors": [{
+    "name": "CodyAbode",
+    "url": "https://github.com/CodyAbode",
+    "discord": "codyabode"
+  }],
+  "media": [
+  {
+    "type": "setup",
+    "url": "systems/cnc-fvtt/assets/Capes-Capers-FVTT-Logo.png",
+    "thumbnail": "systems/cnc-fvtt/assets/Capes-Capers-FVTT-Logo.png"
   }
+],
+  "esmodules": ["module/cnc-fvtt.mjs"],
+  "styles": ["css/cnc-fvtt.css"],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "packs": [],
+  "packFolders": [],
+  "socket": false,
+  "manifest": "Replace this with a link to the /latest release system.json so people can receive updates after they've installed the system",
+  "download": "This must link to a .zip file of the current version",
+  "background": "systems/cnc-fvtt/assets/Capes-Capers-FVTT-Logo.png",
+  "grid": {
+    "distance": 1,
+    "units": "u"
+  }
+}
